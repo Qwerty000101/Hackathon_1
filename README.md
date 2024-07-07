@@ -31,26 +31,26 @@ CSS стили:
 <b>Расчет расстояния</b>
 Функция getDistance рассчитывает расстояние между двумя точками на основе их широты и долготы, используя формулу гаверсинуса:
 
-function getDistance(point1, point2) {
-  const lat1 = parseFloat(point1.lat);
-  const lon1 = parseFloat(point1.lon);
-  const lat2 = parseFloat(point2.lat);
-  const lon2 = parseFloat(point2.lon);
-  const R = 6371e3; // метры
-  const f1 = (lat1 * Math.PI) / 180;
-  const f2 = (lat2 * Math.PI) / 180;
-  const df = ((lat2 - lat1) * Math.PI) / 180;
-  const dlambda = ((lon2 - lon1) * Math.PI) / 180;
-  const a =
-    Math.sin(df / 2) * Math.sin(df / 2) +
-    Math.cos(f1) *
-      Math.cos(f2) *
-      Math.sin(dlambda / 2) *
-      Math.sin(dlambda / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  const d = R * c;
-  return d;
-}
+function getDistance(point1, point2) {<br>
+  const lat1 = parseFloat(point1.lat);<br>
+  const lon1 = parseFloat(point1.lon);<br>
+  const lat2 = parseFloat(point2.lat);<br>
+  const lon2 = parseFloat(point2.lon);<br>
+  const R = 6371e3; // метры<br>
+  const f1 = (lat1 * Math.PI) / 180;<br>
+  const f2 = (lat2 * Math.PI) / 180;<br>
+  const df = ((lat2 - lat1) * Math.PI) / 180;<br>
+  const dlambda = ((lon2 - lon1) * Math.PI) / 180;<br>
+  const a =<br>
+    Math.sin(df / 2) * Math.sin(df / 2) +<br>
+    Math.cos(f1) *<br>
+      Math.cos(f2) *<br>
+      Math.sin(dlambda / 2) *<br>
+      Math.sin(dlambda / 2);<br>
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));<br>
+  const d = R * c;<br>
+  return d;<br>
+}<br>
 
 <b>Установка меток</b>
 Добавление точек:
