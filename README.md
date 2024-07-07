@@ -35,8 +35,6 @@ JavaScript функционал
 Расчет расстояния
 Функция getDistance рассчитывает расстояние между двумя точками на основе их широты и долготы, используя формулу гаверсинуса:
 
-javascript
-Копировать код
 function getDistance(point1, point2) {
   const lat1 = parseFloat(point1.lat);
   const lon1 = parseFloat(point1.lon);
